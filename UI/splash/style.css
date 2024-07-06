@@ -1,0 +1,51 @@
+/* initialize */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* style */
+@keyframes reveal {
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes hide {
+  100% {
+    display: none;
+  }
+}
+
+@keyframes show {
+  100% {
+    height: auto;
+  }
+}
+
+.splash {
+  animation: hide 0s 5s forwards;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.splash img {
+  animation: reveal 3s forwards;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+main {
+  animation: show 0s 5s forwards;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main div {
+  background: #eee;
+  height: 2000px;
+}
