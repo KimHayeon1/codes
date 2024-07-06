@@ -1,5 +1,0 @@
-export const createLi = function drawCrewList(text, parent) {
-  const NODE = document.createElement("li");
-  NODE.textContent = text;
-  parent.appendChild(NODE);
-};
